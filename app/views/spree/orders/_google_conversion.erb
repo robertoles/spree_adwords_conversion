@@ -1,13 +1,11 @@
 <script type="text/javascript">
   /* <![CDATA[ */
   var google_conversion_id = <%= Spree::Config[:conversion_id] %>;
-  var google_conversion_language = <%= Spree::Config[:conversion_language] %>;
+  var google_conversion_language = "<%= Spree::Config[:conversion_language] %>";
   var google_conversion_format = "1";
-  var google_conversion_color = <%= Spree::Config[:conversion_color] %>;
-  var google_conversion_label = <%= Spree::Config[:conversion_label] %>;
-  if (<? echo $totalValue ?>) {
+  var google_conversion_color = "<%= Spree::Config[:conversion_color] %>";
+  var google_conversion_label = "<%= Spree::Config[:conversion_label] %>";
   var google_conversion_value = <%= @order.total %>
-  }
   /* ]]> */ 
 </script>
 <script type="text/javascript"
