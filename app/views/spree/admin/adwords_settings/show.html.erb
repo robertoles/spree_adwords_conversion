@@ -1,11 +1,13 @@
 <%= render :partial => 'spree/admin/shared/configuration_menu' %>
 
-<h1><%= t(:adwords_settings) %></h1>
+<% content_for :page_title do %>
+  <%= t(:adwords_settings) %>
+<% end %>
 
 <table data-hook="preferences">
   <% @preferences.each do |key| %>
     <tr>
-      <th scope="row"><%= t(key) %>:</th>
+      <td scope="row"><%= t(key) %>:</td>
       <td><%= Spree::Config[key] %></td>
     </tr>
   <% end %>

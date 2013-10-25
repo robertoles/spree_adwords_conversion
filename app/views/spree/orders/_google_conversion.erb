@@ -2,10 +2,11 @@
   /* <![CDATA[ */
   var google_conversion_id = <%= Spree::Config[:conversion_id] %>;
   var google_conversion_language = "<%= Spree::Config[:conversion_language] %>";
-  var google_conversion_format = "1";
+  var google_conversion_format = "<%= Spree::Config[:conversion_format] %>";
   var google_conversion_color = "<%= Spree::Config[:conversion_color] %>";
   var google_conversion_label = "<%= Spree::Config[:conversion_label] %>";
-  var google_conversion_value = <%= @order.total %>
+  var google_conversion_value = <%= @order.total %>;
+  var google_remarketing_only = false;
   /* ]]> */ 
 </script>
 <script type="text/javascript"
@@ -15,5 +16,5 @@
   <img height=1 width=1 border=0
   src="http://www.googleadservices.com/pagead/
   conversion/<%= Spree::Config[:conversion_id] %>/?value=
-  <%= @order.total %>&label=<%= Spree::Config[:conversion_language] %>&script=0">
+  <%= @order.total %>&label=<%= Spree::Config[:conversion_language] %>&guid=ON&script=0">
 </noscript>

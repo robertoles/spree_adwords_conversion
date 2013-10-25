@@ -3,12 +3,12 @@ module Spree
     class AdwordsSettingsController < Spree::Admin::BaseController
       def show
         @preferences = ['conversion_id', 'conversion_language', 'conversion_color',
-                        'conversion_label']
+                        'conversion_label', 'conversion_format']
       end
 
       def edit
         @preferences = [:conversion_id, :conversion_language, :conversion_color,
-                        :conversion_label]
+                        :conversion_label, :conversion_format]
       end
 
       def update
